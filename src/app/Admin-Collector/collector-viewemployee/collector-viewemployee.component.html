@@ -1,0 +1,44 @@
+<mat-card>
+    <mat-toolbar>Employies-List</mat-toolbar>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <th>S.No</th>
+                <th>Employee Name</th>
+                <th>Password</th>
+                <th>Phoneno</th>
+                <th>Emailid</th>
+                <th>Gender</th>
+                <th>Qualification</th>
+                <th>Dob</th>
+                <th>District</th>
+                <th>Mandal</th>
+                <th>City</th>
+                <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody >
+                <tr *ngFor="let emp of empdata index as i">
+                <td>{{i+1}}</td>
+                <td>{{emp.EmployeeName}}</td>
+                <td>{{emp.Password}}</td>
+                <td>{{emp.Phoneno}}</td>
+                <td>{{emp.Emailid}}</td>
+                <td>{{emp.Gender}}</td>
+                <td>{{emp.Qualification}}</td>
+                <td>{{emp.Dob | date:'dd/MM/yyyy'}}</td>
+                <td>{{emp.District}}</td>
+                <td>{{emp.Mandal}}</td>
+                <td>{{emp.City}}</td>
+                <td>
+             
+                        <mat-icon color="warn" (click)="deleteemp(emp)">delete</mat-icon>
+                      
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</mat-card>

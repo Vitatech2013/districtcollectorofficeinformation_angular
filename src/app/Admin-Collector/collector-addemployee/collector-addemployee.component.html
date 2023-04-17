@@ -1,0 +1,112 @@
+<div>
+    <form [formGroup]="addemployeeform" (ngSubmit)=" Employeereg()">
+        <mat-card>
+            <mat-toolbar style="background: rgb(107, 208, 129);">Add-Employee</mat-toolbar>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field class="mt-4" appearance="outline" > 
+                        <mat-label>EmployeeName</mat-label>
+                        <input matInput formControlName="EmployeeName">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mt-4" appearance="outline" >
+                        <mat-label>Password</mat-label>
+                        <input matInput formControlName="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline" >
+                        <mat-label>Phone No</mat-label>
+                        <input matInput formControlName="Phoneno">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline" >
+                        <mat-label>Email Id</mat-label>
+                        <input matInput formControlName="Emailid">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label style="margin-left: 8%;margin-top: 5%;">Gender:</label>
+                    <mat-radio-group formControlName="Gender">
+                      <mat-radio-button value="Male" color="primary">Male</mat-radio-button>
+                      <mat-radio-button value="Female">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="fill" appearance="outline" >
+                        <mat-label>Select Qualification</mat-label>
+                        <mat-select formControlName="Qualification" >
+                          <mat-option value="B.Tech">B.Tech</mat-option>
+                          <mat-option value="MBA">MBA</mat-option>
+                          <mat-option value="Degree">Degree</mat-option>
+                          <mat-option value="MCA">MCA</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="fill" class="example-form-field" appearance="outline" >
+                        <mat-label>Choose a Birth Date</mat-label>
+                        <input matInput [matDatepicker]="datepicker" formControlName="Dob">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #datepicker>
+                          <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                          </mat-datepicker-actions>
+                        </mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="fill" class="mt-3" appearance="outline" >
+                        <mat-label>Select District</mat-label>
+                        <mat-select formControlName="District">
+                          <mat-option value="Peddapalli">Peddapalli</mat-option>
+                          <mat-option value="Karimnagar">Karimnagar</mat-option>
+                          <mat-option value="Mancherial">Mancherial</mat-option>
+                          <mat-option value="Jagityal">Jagityal</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="fill" class="mt-3" appearance="outline" >
+                        <mat-label>Select Mandal</mat-label>
+                        <mat-select formControlName="Mandal">
+                          <mat-option value="Ramagundem">Ramagundem</mat-option>
+                          <mat-option value="Chopadandi">Chopadandi</mat-option>
+                          <mat-option value="Mandamari">Mandamari</mat-option>
+                          <mat-option value="Jagityal">Jagityal</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mt-3" appearance="outline" >
+                        <mat-label>Select City</mat-label>
+                            <mat-select formControlName="City">
+                                <mat-option value="Godavarikhani">Godavarikhani</mat-option>
+                                <mat-option value="Vedurugatta">Vedurugatta</mat-option>
+                                <mat-option value="Mandamari">Mandamari</mat-option>
+                                <mat-option value="Jagityal">Jagityal</mat-option>
+                            </mat-select>    
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="text-center mt-2 mb-3">
+                <button mat-raised-button color="primary">Add Employee</button>
+            </div>
+        </mat-card>
+    </form>
+</div>
+
+
+  

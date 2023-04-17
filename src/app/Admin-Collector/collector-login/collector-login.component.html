@@ -1,0 +1,19 @@
+<app-home-navbar></app-home-navbar>
+<div>
+    <form [formGroup]="collectorloginform" >
+        <mat-card>
+            <mat-toolbar >Collector-Login</mat-toolbar>
+            <mat-form-field appearance="outline">
+                <mat-label>UserName</mat-label>
+                <input matInput placeholder="Please Enter UserName" formControlName="UserName">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Please Enter Password" formControlName="Password">
+            </mat-form-field>
+            <div class="text-center mb-3 mt-2">
+                <button mat-raised-button color="primary" (click)="login()">Login</button>
+            </div>
+        </mat-card>
+    </form>
+</div>
