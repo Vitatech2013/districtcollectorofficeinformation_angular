@@ -14,7 +14,6 @@ import { CollectorViewdeathcertificateComponent } from './Admin-Collector/collec
 import { CollectorViewrationcertificateComponent } from './Admin-Collector/collector-viewrationcertificate/collector-viewrationcertificate.component';
 import { EmployeeLoginComponent } from './Employee/employee-login/employee-login.component';
 import { EmployeeNavbarComponent } from './Employee/employee-navbar/employee-navbar.component';
-import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 import { EmployeeViewusercomplaintComponent } from './Employee/employee-viewusercomplaint/employee-viewusercomplaint.component';
 import { EmployeeViewcastecertificateComponent } from './Employee/employee-viewcastecertificate/employee-viewcastecertificate.component';
 import { EmployeeViewpensioncertificateComponent } from './Employee/employee-viewpensioncertificate/employee-viewpensioncertificate.component';
@@ -37,6 +36,7 @@ import { CitizenViewbirthcertificateComponent } from './User-Citizen/citizen-vie
 import { CitizenViewdeathcertificateComponent } from './User-Citizen/citizen-viewdeathcertificate/citizen-viewdeathcertificate.component';
 import { CitizenViewrationcertificateComponent } from './User-Citizen/citizen-viewrationcertificate/citizen-viewrationcertificate.component';
 import { CitizenProfileComponent } from './User-Citizen/citizen-profile/citizen-profile.component';
+import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 
 
 const routes: Routes = [
@@ -45,6 +45,7 @@ const routes: Routes = [
   {path:'collector-login' , component:CollectorLoginComponent},
   {path:'collector-navbar' , component:CollectorNavbarComponent,
   children:[
+    {path:'' , redirectTo:'admin-addemployee' , pathMatch:'full'},
     {path:'admin-addemployee' , component:CollectorAddemployeeComponent},
     {path:'admin-viewemployee' , component:CollectorViewemployeeComponent},
     {path:'admin-viewcaste' , component:CollectorViewcastecertificateComponent},
@@ -58,7 +59,7 @@ const routes: Routes = [
   {path:'employee-navbar' , component:EmployeeNavbarComponent,
   children:[
     {path:'' , redirectTo:'employee-profile' , pathMatch:'full'},
-    {path:'employee-profile' , component:EmployeeProfileComponent},
+    {path:'employee-profile' , component:EmployeeProfileComponent },
     {path:'employee-viewcomplaint' , component:EmployeeViewusercomplaintComponent},
     {path:'employee-viewcaste' , component:EmployeeViewcastecertificateComponent},
     {path:'employee-viewpension' , component:EmployeeViewpensioncertificateComponent},

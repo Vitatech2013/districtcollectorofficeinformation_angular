@@ -24,7 +24,7 @@ login(){
   let Password = this.Employeeloginform.get('Password')?.value;
   this.service.EmployeeLogin(EmployeeName,Password).subscribe((res)=>{
     if(res){
-    localStorage.setItem('Employee',JSON.stringify(res.body));
+    localStorage.setItem('Employee',JSON.stringify(res));
     alert("Employee Login Success");
     this.router.navigate(['/employee-navbar'])
     }

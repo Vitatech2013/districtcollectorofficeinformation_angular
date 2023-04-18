@@ -13,7 +13,6 @@ import { CollectorViewbirthcertificateComponent } from './Admin-Collector/collec
 import { CollectorViewdeathcertificateComponent } from './Admin-Collector/collector-viewdeathcertificate/collector-viewdeathcertificate.component';
 import { CollectorViewrationcertificateComponent } from './Admin-Collector/collector-viewrationcertificate/collector-viewrationcertificate.component';
 import { EmployeeLoginComponent } from './Employee/employee-login/employee-login.component';
-import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 import { EmployeeViewusercomplaintComponent } from './Employee/employee-viewusercomplaint/employee-viewusercomplaint.component';
 import { EmployeeViewbirthcertificateComponent } from './Employee/employee-viewbirthcertificate/employee-viewbirthcertificate.component';
 import { EmployeeViewpensioncertificateComponent } from './Employee/employee-viewpensioncertificate/employee-viewpensioncertificate.component';
@@ -50,6 +49,7 @@ import { CitizenViewrationcertificateComponent } from './User-Citizen/citizen-vi
 
 import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 
 
 @NgModule({
@@ -64,7 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     CollectorViewdeathcertificateComponent,
     CollectorViewrationcertificateComponent,
     EmployeeLoginComponent,
-    EmployeeProfileComponent,
+   
     EmployeeViewusercomplaintComponent,
     EmployeeViewbirthcertificateComponent,
     EmployeeViewpensioncertificateComponent,
@@ -90,7 +90,8 @@ import { HttpClientModule } from '@angular/common/http';
     CitizenViewpensioncertificateComponent,
     CitizenViewbirthcertificateComponent,
     CitizenViewdeathcertificateComponent,
-    CitizenViewrationcertificateComponent
+    CitizenViewrationcertificateComponent,
+    EmployeeProfileComponent
   ],
   imports: [
     BrowserModule,
