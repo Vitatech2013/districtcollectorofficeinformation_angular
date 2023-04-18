@@ -1,2 +1,113 @@
 <app-home-navbar></app-home-navbar>
-<p>citizen-registration works!</p>
+<div>
+    <form [formGroup]="RegForm" >
+        <mat-card>
+            <mat-toolbar >Citizen-Register-Form</mat-toolbar>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>UserName</mat-label>
+                        <input matInput placeholder="Please Enter UserName" formControlName="UserName">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Please Enter Password" formControlName="Password">
+                    </mat-form-field>
+                <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Qualification</mat-label>
+                        <mat-select formControlName="Qualification">
+                          <mat-option value="MBA">MBA</mat-option>
+                          <mat-option value="MCA">MCA</mat-option>
+                          <mat-option value="B.TECH">B.TECH</mat-option>
+                          <mat-option value="M.TECH">M.TECH</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4 mt-2">
+                    <mat-radio-group aria-label="Select an option" color="primary" formControlName="Gender">
+                        <mat-radio-button value="Male">Male</mat-radio-button>
+                        <mat-radio-button value="Female">Female</mat-radio-button>
+                      </mat-radio-group>
+                <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Date of Birth</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="Dob">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone no</mat-label>
+                        <input matInput placeholder="Please Enter Phoneno" formControlName="Phoneno">
+                    </mat-form-field>
+                <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email-Id</mat-label>
+                        <input matInput placeholder="Please Enter UserName" formControlName="Emailid">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>District</mat-label>
+                        <mat-select formControlName="District" (change)="ChangeDistrict($any($event.target).value)">
+                          <mat-option *ngFor="let count of District" value="{{count.name}}">{{count.name}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mandal</mat-label>
+                        <mat-select formControlName="Mandal">
+                        <mat-option *ngFor="let mandal of mandals" value="{{mandal}}">{{mandal}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Town/Village</mat-label>
+                        <mat-select formControlName="City" placeholder="Town/Village">
+                          <mat-option  value="let village of villages"></mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+
+            <div class="text-center mb-3 mt-2">
+                <button mat-raised-button color="primary" (click)="Reg()">Register</button>
+            </div>
+            <div class="text-center mb-3 mt-2">
+                <a routerLink="/citizen-login">Already Registered Login Here ?</a>
+            </div>
+        </mat-card>
+    </form>
+</div>
