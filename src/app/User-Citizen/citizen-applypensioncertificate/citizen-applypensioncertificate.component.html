@@ -1,1 +1,144 @@
-<p>citizen-applypensioncertificate works!</p>
+<div class="main mt-4">
+    <mat-card>
+        <form>
+            <div class="text-center">
+                <h2>Pension-Certificate</h2>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>ApplicationNumber</mat-label>
+                            <input matInput placeholder="Please Enter Applicationno">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>UserName</mat-label>
+                            <input matInput placeholder="Enter UserName">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email-Id</mat-label>
+                            <input matInput placeholder="Enter EmailId">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Mobile no</mat-label>
+                            <input matInput placeholder="Please Enter Mobileno">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4 mt-2 m-auto">
+                        <mat-radio-group aria-label="Select an option" color="primary">
+                            <mat-radio-button value="S/O">S/O</mat-radio-button>
+                            <mat-radio-button value="D/O">D/O</mat-radio-button>
+                          </mat-radio-group>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>S/O (or) D/O Name</mat-label>
+                            <input matInput placeholder="Enter Name">
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Age</mat-label>
+                            <input matInput placeholder="Enter Age">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Children</mat-label>
+                            <input matInput placeholder="Enter ChildrenName">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>District</mat-label>
+                            <mat-select >
+                              <mat-option value="Karimnagar">Karimnagar</mat-option>
+                              <mat-option value="Hanmakonda">Hanmakonda</mat-option>
+                              <mat-option value="warangal">warangal</mat-option>
+                              <mat-option value="Husnabad">Husnabad</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Mandal</mat-label>
+                            <mat-select >
+                              <mat-option value="Gangadhara">Gangadhara</mat-option>
+                              <mat-option value="Vanaparthi">Vanaparthi</mat-option>
+                              <mat-option value="Bejanki">Bejanki</mat-option>
+                              <mat-option value="Parkikal">Parkikal</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Town (or) Village</mat-label>
+                            <mat-select >
+                                <mat-option value="Odyaram">Odyaram</mat-option>
+                                <mat-option value="Gatududenapalli">Gatududenapalli</mat-option>
+                                <mat-option value="Veerapur">Veerapur</mat-option>
+                                <mat-option value="Kasaram">Kasaram</mat-option>
+                              </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>House No</mat-label>
+                            <input matInput placeholder="Enter Houseno">
+                        </mat-form-field>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>AadharNumber</mat-label>
+                            <input matInput placeholder="Enter Adharno">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Pincode</mat-label>
+                            <input matInput placeholder="Enter Pincode">
+                        </mat-form-field>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4 mt-2">
+                        <input  type="file" accept="image/*" class="form-control"  (change)="onSelectFile($event)">
+                    </div>
+                    <div class="col-sm-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Status</mat-label>
+                            <mat-select >
+                                <mat-option value="Pending">Pending</mat-option>
+                                <mat-option value="Accept">Accept</mat-option>
+                                <mat-option value="Reject">Reject</mat-option>
+                              </mat-select>
+                        </mat-form-field> 
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+                <div class="text-center mt-4 mb-4">
+                    <button class="btn btn-success">Submit</button>
+                </div>
+
+            </div>
+        </form>
+    </mat-card>
+</div>
+

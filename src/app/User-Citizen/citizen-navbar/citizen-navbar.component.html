@@ -3,11 +3,34 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>Citizen-Module</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="citizen-profile">Profile</a>
+      <a mat-list-item routerLink="citizen-addcomplaint">Add-Complaints</a>
+      <a mat-list-item routerLink="citizen-viewcomplaint">View-Complaints</a>
+      <a mat-list-item [matMenuTriggerFor]="belowMenu">Apply Certificates&nbsp;<span class="material-symbols-outlined">
+        expand_more
+        </span></a>
+        <mat-menu #belowMenu="matMenu" yPosition="below">
+          <a mat-menu-item routerLink="citizen-applycaste">Apply Cast-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applypension">Apply Pension-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applybirth">Apply Birth-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applydeath">Apply Death-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applyration">Apply Ration-Certificates</a>
+        </mat-menu>
+        <a mat-list-item [matMenuTriggerFor]="belowMenu">View-Certificates&nbsp;<span class="material-symbols-outlined">
+          expand_more
+          </span></a>
+          <mat-menu #belowMenu="matMenu" yPosition="below">
+            <a mat-menu-item routerLink="citizen-viewcaste">Cast-Certificates</a>
+            <a mat-menu-item routerLink="citizen-viewpension">Pension-Certificates</a>
+            <a mat-menu-item routerLink="citizen-viewbirth">Birth-Certificates</a>
+            <a mat-menu-item routerLink="citizen-viewdeath">Death-Certificates</a>
+            <a mat-menu-item routerLink="citizen-viewration">Ration-Certificates</a>
+          </mat-menu>
+      <a mat-list-item routerLink="">Change-Password</a>
+      <a mat-list-item routerLink="/home">Log-Out</a>
+      
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -20,8 +43,8 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Front-End</span>
+      <span>District Collector Office Information</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
+<router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
