@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class CitizenApplyrationcertificateComponent {
 
+  url:any;
+
+  onSelectFile(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      var reader = new FileReader();
+
+      reader.readAsDataURL(event.target.files[0]);
+
+      reader.onload = (event) => {
+        this.url = event.target?.result;
+      }
+    }
+  }
 }
