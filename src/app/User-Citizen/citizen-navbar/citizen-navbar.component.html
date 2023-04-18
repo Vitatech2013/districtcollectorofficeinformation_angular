@@ -12,16 +12,16 @@
         expand_more
         </span></a>
         <mat-menu #belowMenu="matMenu" yPosition="below">
-          <a mat-menu-item routerLink="citizen-applycaste">Apply Cast-Certificates</a>
-          <a mat-menu-item routerLink="citizen-applypension">Apply Pension-Certificates</a>
-          <a mat-menu-item routerLink="citizen-applybirth">Apply Birth-Certificates</a>
-          <a mat-menu-item routerLink="citizen-applydeath">Apply Death-Certificates</a>
-          <a mat-menu-item routerLink="citizen-applyration">Apply Ration-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applycaste"> Cast-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applypension"> Pension-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applybirth"> Birth-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applydeath"> Death-Certificates</a>
+          <a mat-menu-item routerLink="citizen-applyration"> Ration-Certificates</a>
         </mat-menu>
-        <a mat-list-item [matMenuTriggerFor]="belowMenu">View-Certificates&nbsp;<span class="material-symbols-outlined">
+        <a mat-list-item [matMenuTriggerFor]="belowMenu1">View-Certificates&nbsp;<span class="material-symbols-outlined">
           expand_more
           </span></a>
-          <mat-menu #belowMenu="matMenu" yPosition="below">
+          <mat-menu #belowMenu1="matMenu" yPosition="below">
             <a mat-menu-item routerLink="citizen-viewcaste">Cast-Certificates</a>
             <a mat-menu-item routerLink="citizen-viewpension">Pension-Certificates</a>
             <a mat-menu-item routerLink="citizen-viewbirth">Birth-Certificates</a>

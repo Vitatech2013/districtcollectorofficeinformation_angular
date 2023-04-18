@@ -14,4 +14,16 @@ UserLogin(UserName:any,Password:any){
 UserReg(data:any){
   return this.http.post('http://localhost:4000/user/',data)
 }
+UserAddComplaint(data:any){
+   return this.http.post<any>(`http://localhost:4000/user/Addcomplaint`, data)
+}
+GetUserComplaint(UserName:any){
+  return this.http.get<any>(`http://localhost:4000/user/viewcomple?UserName=${UserName}`)
+}
+PostapplyCaste(data:any){
+  return this.http.post<any>(`http://localhost:4000/user/cast`, data)
+}
+GetCaste(UserName:any){
+  return this.http.get<any>(`http://localhost:4000/user/viewcast?UserName=${UserName}`)
+}
 }

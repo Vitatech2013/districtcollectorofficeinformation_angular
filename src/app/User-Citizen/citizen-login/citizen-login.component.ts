@@ -25,7 +25,7 @@ login(){
  let Password = this.loginform.get('Password')?.value;
   this.service.UserLogin(UserName,Password).subscribe((res)=>{
     if(res){
-      localStorage.setItem('user',JSON.stringify(res.body));
+      localStorage.setItem('user',JSON.stringify(res));
       alert("User Login Success");
   this.router.navigate(['/citizen-navbar'])
     }
