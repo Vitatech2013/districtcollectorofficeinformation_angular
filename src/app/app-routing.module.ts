@@ -37,6 +37,7 @@ import { CitizenViewdeathcertificateComponent } from './User-Citizen/citizen-vie
 import { CitizenViewrationcertificateComponent } from './User-Citizen/citizen-viewrationcertificate/citizen-viewrationcertificate.component';
 import { CitizenProfileComponent } from './User-Citizen/citizen-profile/citizen-profile.component';
 import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
+import { CitizenChngPwdComponent } from './User-Citizen/citizen-chng-pwd/citizen-chng-pwd.component';
 
 
 const routes: Routes = [
@@ -85,7 +86,8 @@ const routes: Routes = [
     {path:'citizen-viewpension', component:CitizenViewpensioncertificateComponent},
     {path:'citizen-viewbirth' , component:CitizenViewbirthcertificateComponent},
     {path:'citizen-viewdeath' , component:CitizenViewdeathcertificateComponent},
-    {path:'citizen-viewration',component:CitizenViewrationcertificateComponent}
+    {path:'citizen-viewration',component:CitizenViewrationcertificateComponent},
+    {path:'citizen-chngPwd',component:CitizenChngPwdComponent}
   ]
   }
   

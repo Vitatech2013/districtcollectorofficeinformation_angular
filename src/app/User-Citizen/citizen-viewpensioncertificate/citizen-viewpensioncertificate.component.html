@@ -24,23 +24,23 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let P of Pension index as i">
+            <td>{{i+1}}</td>
+            <td>{{P.UserName}}</td>
+            <td>{{P.Emailid}}</td>
+            <td>{{P.MobileNumber}}</td>
+            <td>{{P.Sonofdaughter}}</td>
+           <td>{{P.SonOfDaughterName}}</td>
+           <td>{{P.Age}}</td>
+           <td>{{P.Children}}</td>
+           <td>{{P.District}}</td>
+           <td>{{P.Mandal}}</td>
+           <td>{{P.City}}</td>
+           <td>{{P.HouseNo}}</td>
+           <td>{{P.Pincode}}</td>
+           <td>{{P.AadherNumber}}</td>
+           <td>{{P.Aadharcard}}</td>
+           <td>{{P.status}}</td>
           </tr>
         </tbody>
       </table>

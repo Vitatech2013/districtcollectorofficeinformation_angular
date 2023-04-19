@@ -50,6 +50,7 @@ import { CitizenViewrationcertificateComponent } from './User-Citizen/citizen-vi
 import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
+import { CitizenChngPwdComponent } from './User-Citizen/citizen-chng-pwd/citizen-chng-pwd.component';
 
 
 @NgModule({
@@ -91,7 +92,8 @@ import { EmployeeProfileComponent } from './Employee/employee-profile/employee-p
     CitizenViewbirthcertificateComponent,
     CitizenViewdeathcertificateComponent,
     CitizenViewrationcertificateComponent,
-    EmployeeProfileComponent
+    EmployeeProfileComponent,
+    CitizenChngPwdComponent
   ],
   imports: [
     BrowserModule,
