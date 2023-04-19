@@ -26,4 +26,16 @@ PostapplyCaste(data:any){
 GetCaste(UserName:any){
   return this.http.get<any>(`http://localhost:4000/user/viewcast?UserName=${UserName}`)
 }
+AddPension(data:any){
+  return this.http.post<any>(`http://localhost:4000/user/pention`, data)
+}
+AddBirth(data:any){
+  return this.http.post<any>(`http://localhost:4000/user/birth`,data)
+}
+AddDeath(data:any){
+  return this.http.post<any>(`http://localhost:4000/user/death`,data)
+}
+AddRation(data:any){
+  return this.http.post<any>(`http://localhost:4000/user/ration`,data)
+}
 }

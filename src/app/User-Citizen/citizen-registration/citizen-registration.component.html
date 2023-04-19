@@ -72,7 +72,7 @@
                 <div class="col-sm-4">
                     <mat-form-field appearance="outline">
                         <mat-label>District</mat-label>
-                        <mat-select formControlName="District" (change)="ChangeDistrict($any($event.target).value)">
+                        <mat-select formControlName="District">
                           <mat-option *ngFor="let count of District" value="{{count.name}}">{{count.name}}</mat-option>
                         </mat-select>
                       </mat-form-field>
@@ -86,7 +86,10 @@
                     <mat-form-field appearance="outline">
                         <mat-label>Mandal</mat-label>
                         <mat-select formControlName="Mandal">
-                        <mat-option *ngFor="let mandal of mandals" value="{{mandal}}">{{mandal}}</mat-option>
+                          <mat-option value="Ramagundem">Ramagundem</mat-option>
+                          <mat-option value="Khamanpur">Khamanpur</mat-option>
+                          <mat-option value="Gangadhara">Gangadhara</mat-option>
+                          <mat-option value="Choopandandi">Choopandandi</mat-option>
                         </mat-select>
                       </mat-form-field>
                 </div>
@@ -94,7 +97,10 @@
                     <mat-form-field appearance="outline">
                         <mat-label>Town/Village</mat-label>
                         <mat-select formControlName="City" placeholder="Town/Village">
-                          <mat-option  value="let village of villages"></mat-option>
+                            <mat-option value="Godavarikhani">Godavarikhani</mat-option>
+                            <mat-option value="Vedurugatta">Vedurugatta</mat-option>
+                            <mat-option value="Kothapalli">Kothapalli</mat-option>
+                            <mat-option value="Odyaram">Odyaram</mat-option>
                         </mat-select>
                       </mat-form-field>
                 <div class="col-sm-2"></div>
