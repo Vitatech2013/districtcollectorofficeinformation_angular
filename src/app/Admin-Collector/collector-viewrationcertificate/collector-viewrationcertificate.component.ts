@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AdminApiService } from '../collector-services/admin-api.service';
 
 @Component({
   selector: 'app-collector-viewrationcertificate',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./collector-viewrationcertificate.component.scss']
 })
 export class CollectorViewrationcertificateComponent {
+  Ration:any;
+  constructor(private Api:AdminApiService){}
+
+  ngOnInit(): void {
+    this.Api.ViewDeathCerti().subscribe((res:any)=>{
+      this.Ration = res;
+    })
+
+}
 
 }
