@@ -7,7 +7,6 @@
           <tr class="table-primary">
             <th scope="col">S.No</th>
             <th scope="col">UserName</th>
-            <th scope="col">EmailId</th>
             <th scope="col">Mobileno</th>
             <th scope="col">s/O(or)D/O</th>
             <th scope="col">FatherName</th>
@@ -27,11 +26,10 @@
           <tr *ngFor="let B of Birth index as i">
             <td>{{i+1}}</td>
             <td>{{B.UserName}}</td>
-            <td>{{B.Emailid}}</td>
             <td>{{B.MobileNumber}}</td>
             <td>{{B.Sonofdaughter}}</td>
             <td>{{B.SonOfDaughterName}}</td>
-            <td>{{B.Dob}}</td>
+            <td>{{B.Dob | date}}</td>
             <td>{{B.PlaceDob}}</td>
             <td>{{B.District}}</td>
             <td>{{B.Mandal}}</td>

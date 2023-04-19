@@ -20,7 +20,6 @@
             <th scope="col">Adharno</th>
             <th scope="col">Documents</th>
             <th scope="col">Status</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -39,12 +38,8 @@
             <td>{{R.Annualincome}}</td>
             <td>{{R.AadherNumber}}</td>
             <td><img src="{{R.Photo}}" height="60%" width="60%"></td>
-            <td>{{R.status}}</td>
-            <td>
-                <button mat-icon-button color="primary">
-                    <mat-icon>edit</mat-icon>
-                  </button>
-            </td>
+            <td><button (click)="rationdialogue(R)">{{R.status}}</button></td>
+            
           </tr>
         </tbody>
       </table>

@@ -20,7 +20,6 @@
             <th scope="col">Adharno</th>
             <th scope="col">Documents</th>
             <th scope="col">Status</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -39,12 +38,8 @@
            <td>{{P.Pincode}}</td>
            <td>{{P.AadherNumber}}</td>
            <td><img src="{{P.Aadharcard}}" width="60%" height="60%"></td>
-           <td>{{P.status}}</td>
-           <td>
-            <button mat-icon-button color="primary">
-                <mat-icon>edit</mat-icon>
-              </button>
-        </td>
+           <td><button (click)="pensiondialogue(P)">{{P.status}}</button></td>
+          
           </tr>
         </tbody>
       </table>

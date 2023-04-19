@@ -51,8 +51,11 @@ import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 import { CitizenChngPwdComponent } from './User-Citizen/citizen-chng-pwd/citizen-chng-pwd.component';
-import { UpdateStatusComponent } from './Employee/update-status/update-status.component';
-
+import { EmployeeCastestatusComponent } from './Employee/employee-castestatus/employee-castestatus.component';
+import { EmployeeRationstatusComponent } from './Employee/employee-rationstatus/employee-rationstatus.component';
+import { EmployeeBirthstatusComponent } from './Employee/employee-birthstatus/employee-birthstatus.component';
+import { EmployeeDeathstatusComponent } from './Employee/employee-deathstatus/employee-deathstatus.component';
+import { EmployeePensionstatusComponent } from './Employee/employee-pensionstatus/employee-pensionstatus.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +98,11 @@ import { UpdateStatusComponent } from './Employee/update-status/update-status.co
     CitizenViewrationcertificateComponent,
     EmployeeProfileComponent,
     CitizenChngPwdComponent,
-    UpdateStatusComponent
+    EmployeeCastestatusComponent,
+    EmployeeRationstatusComponent,
+    EmployeeBirthstatusComponent,
+    EmployeeDeathstatusComponent,
+    EmployeePensionstatusComponent,
   ],
   imports: [
     BrowserModule,

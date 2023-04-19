@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup , Validators , FormControl } from '@angular/forms';
 import { UserApiService } from '../user-services/user-api.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-citizen-applycastecertificate',
@@ -62,4 +63,5 @@ ngOnInit(): void {
       alert("Something went wrong")
     }
 }
+
 }

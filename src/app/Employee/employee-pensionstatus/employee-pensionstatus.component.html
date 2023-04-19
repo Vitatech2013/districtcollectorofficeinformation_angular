@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="penssiontatusform" (ngSubmit)="editstatus()">
+        <mat-card>
+            <mat-toolbar color="accent">Update-status</mat-toolbar>
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="UserName" readonly>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                    <mat-option value="Pending">Pending</mat-option>
+                    <mat-option value="Accept">Accept</mat-option>
+                    <mat-option value="Reject">Reject</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <div class="text-center mb-3">
+                <button mat-raised-button color="primary">Update</button>
+            </div>
+        </mat-card>
+    </form>
+</div>

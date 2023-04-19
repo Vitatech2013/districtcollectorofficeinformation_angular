@@ -38,7 +38,10 @@ import { CitizenViewrationcertificateComponent } from './User-Citizen/citizen-vi
 import { CitizenProfileComponent } from './User-Citizen/citizen-profile/citizen-profile.component';
 import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 import { CitizenChngPwdComponent } from './User-Citizen/citizen-chng-pwd/citizen-chng-pwd.component';
-import { UpdateStatusComponent } from './Employee/update-status/update-status.component';
+import { EmployeeCastestatusComponent } from './Employee/employee-castestatus/employee-castestatus.component';
+import { EmployeeBirthstatusComponent } from './Employee/employee-birthstatus/employee-birthstatus.component';
+import { EmployeeDeathstatusComponent } from './Employee/employee-deathstatus/employee-deathstatus.component';
+import { EmployeeRationstatusComponent } from './Employee/employee-rationstatus/employee-rationstatus.component';
 
 
 const routes: Routes = [
@@ -68,7 +71,12 @@ const routes: Routes = [
     {path:'employee-viewbirth' ,  component:EmployeeViewbirthcertificateComponent},
     {path:'employee-viewdeath' , component:EmployeeViewdeathcertificateComponent},
     {path:'employee-viewration' , component:EmployeeViewrationcertificateComponent},
-    {path:'Update-Status',component:UpdateStatusComponent}
+    {path:'employee-statuscaste' , component:EmployeeCastestatusComponent},
+    {path:'employee-statusbirth' , component:EmployeeBirthstatusComponent},
+    {path:'employee-statusdeath' , component:EmployeeDeathstatusComponent},
+    {path:'employee-statusration', component:EmployeeRationstatusComponent},
+    {path:'employee-statuspension', component:EmployeeViewpensioncertificateComponent}
+ 
   ]
   },
   {path:'citizen-registration' , component:CitizenRegistrationComponent},

@@ -20,7 +20,6 @@
             <th scope="col">Adharno</th>
             <th scope="col">Documents</th>
             <th scope="col">Status</th>
-            <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>
@@ -39,8 +38,10 @@
             <td>{{B.Pincode}}</td>
             <td>{{B.AadherNumber}}</td>
             <td><img src="{{B.Rationcard}}" width="60%" height="60%"></td>
-            <td>{{B.status}}</td>
-            <a (click)="status()"><mat-icon color="primary">edit</mat-icon></a>
+            <td>
+              <button (click)="birthdialogue(B)"> {{B.status}}</button>
+             </td>
+            
           </tr>
         </tbody>
       </table>

@@ -20,7 +20,6 @@
             <th scope="col">Adharno</th>
             <th scope="col">Documents</th>
             <th scope="col">Status</th>
-            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -39,11 +38,8 @@
             <td>{{D.Pincode}}</td>
             <td>{{D.AadherNumber}}</td>
             <td><img src="{{D.Jobcard}}" width="60%" height="60%"></td>
-            <td>{{D.status}}</td>
             <td>
-                <button mat-icon-button color="primary">
-                    <mat-icon>edit</mat-icon>
-                  </button>
+               <button (click)="deathdialogue(D)">{{D.status}}</button>
             </td>
           </tr>
         </tbody>

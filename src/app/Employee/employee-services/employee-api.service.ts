@@ -36,8 +36,19 @@ ViewRation(){
 ViewBirth(){
   return this.http.get('http://localhost:4000/employee/empbirthvieww')
 }
-CastUpdate(){
-  
+CasteStatusUpdate(id:any , data:any){
+  return this.http.put<any>(`http://localhost:4000/employee/caststatus/`+id,data)
 }
-
+BirthStatusUpdate(id:any , data:any){
+  return this.http.put<any>(`http://localhost:4000/employee/birthstatus/`+id,data)
+}
+DeathStatusUpdate(id:any , data:any){
+  return this.http.put<any>(`http://localhost:4000/employee/deathstatus/`+id,data)
+}
+PensionStatusUpdate(id:any , data:any){
+  return this.http.put<any>(`http://localhost:4000/employee/pentionstatus/`+id,data)
+}
+RationStatusUpdate(id:any , data:any){
+  return this.http.put<any>(`http://localhost:4000/employee/rationstatus/`+id,data)
+}
 }

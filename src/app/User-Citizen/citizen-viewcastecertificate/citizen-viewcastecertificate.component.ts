@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserApiService } from '../user-services/user-api.service';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -18,6 +19,6 @@ export class CitizenViewcastecertificateComponent implements OnInit{
     this.Api.ViewCast(name).subscribe((res:any)=>{
       this.Cast = res;
     })
-
 }
+
 }

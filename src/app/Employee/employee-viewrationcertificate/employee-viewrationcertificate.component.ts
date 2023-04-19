@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeApiService } from '../employee-services/employee-api.service';
+import { EmployeeRationstatusComponent } from '../employee-rationstatus/employee-rationstatus.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-employee-viewrationcertificate',
@@ -8,7 +10,7 @@ import { EmployeeApiService } from '../employee-services/employee-api.service';
 })
 export class EmployeeViewrationcertificateComponent implements OnInit{
   Ration:any;
-  constructor(private Api:EmployeeApiService){
+  constructor(private Api:EmployeeApiService , private dialog:MatDialog){
 
   }
   ngOnInit(): void {
@@ -16,5 +18,11 @@ export class EmployeeViewrationcertificateComponent implements OnInit{
       this.Ration = res;
     })
   }
-
+  rationdialogue(e:any){
+    this.dialog.open(EmployeeRationstatusComponent,{
+      width:'50%',
+      height:'55%',
+      data:e
+    })
+  }
 }
