@@ -53,6 +53,7 @@ constructor(private fb:FormBuilder , private service:UserApiService , private ro
   applyRation(){
     let data = {
       ...this.rationform.value,
+      Photo:this.url,
       status : 'Pending'
     }
     if(this.rationform.valid){

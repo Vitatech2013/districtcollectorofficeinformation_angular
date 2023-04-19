@@ -1,4 +1,5 @@
-<div class="text-center mt-4">
+<mat-card>
+  <div class="text-center mt-4">
     <h2 style="color:rgb(238, 169, 21)">Caste Certificate List</h2>
 </div>
 <div class="table-responsive">
@@ -7,7 +8,6 @@
           <tr class="table-primary">
             <th scope="col">S.No</th>
             <th scope="col">UserName</th>
-            <th scope="col">EmailId</th>
             <th scope="col">Mobileno</th>
             <th scope="col">s/O(or)D/O</th>
             <th scope="col">FatherName</th>
@@ -28,19 +28,18 @@
           <tr *ngFor="let C of Cast index as i">
             <td>{{i+1}}</td>
             <td>{{C.UserName}}</td>
-            <td>{{C.Emailid}}</td>
             <td>{{C.MobileNumber}}</td>
             <td>{{C.Sonofdaughter}}</td>
             <td>{{C.SonOfDaughterName}}</td>
             <td>{{C.CastType}}</td>
-            <td>{{C.Dob}}</td>
+            <td>{{C.Dob | date}}</td>
             <td>{{C.District}}</td>
             <td>{{C.Mandal}}</td>
             <td>{{C.City}}</td>
             <td>{{C.HouseNo}}</td>
             <td>{{C.Pincode}}</td>
             <td>{{C.AadherNumber}}</td>
-            <td>{{C.Sscmemo}}</td>
+            <td><img src="{{C.Sscmemo}}" width="60%" height="60%"></td>
             <td>{{C.status}}</td>
             <td>
                 <button mat-icon-button color="primary">
@@ -51,6 +50,4 @@
         </tbody>
       </table>
 </div>
-
-
-
+</mat-card>

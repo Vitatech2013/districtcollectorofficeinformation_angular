@@ -7,7 +7,6 @@
           <tr class="table-primary">
             <th scope="col">S.No</th>
             <th scope="col">UserName</th>
-            <th scope="col">Applino</th>
             <th scope="col">Mobileno</th>
             <th scope="col">s/O(or)D/O</th>
             <th scope="col">FatherName</th>
@@ -28,7 +27,6 @@
           <tr *ngFor="let R of Ration index as i">
             <td>{{i+1}}</td>
             <td>{{R.UserName}}</td>
-            <td>{{R.ApplicationNo}}</td>
             <td>{{R.MobileNumber}}</td>
             <td>{{R.Sonofdaughter}}</td>
             <td>{{R.SonOfDaughterName}}</td>
@@ -40,6 +38,7 @@
             <td>{{R.City}}</td>
             <td>{{R.Annualincome}}</td>
             <td>{{R.AadherNumber}}</td>
+            <td><img src="{{R.Photo}}" height="60%" width="60%"></td>
             <td>{{R.status}}</td>
             <td>
                 <button mat-icon-button color="primary">

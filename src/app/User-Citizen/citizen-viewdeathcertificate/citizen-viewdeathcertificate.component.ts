@@ -12,7 +12,8 @@ export class CitizenViewdeathcertificateComponent implements OnInit{
   constructor(private Api:UserApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewDeathCerti().subscribe((res:any)=>{
+    let name=JSON.parse(localStorage.getItem('user')!).UserName;
+    this.Api.ViewDeathCerti(name).subscribe((res:any)=>{
       this.DeathCerti = res;
     })
   }

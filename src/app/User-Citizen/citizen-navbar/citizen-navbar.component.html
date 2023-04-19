@@ -29,8 +29,6 @@
             <a mat-menu-item routerLink="citizen-viewration">Ration-Certificates</a>
           </mat-menu>
       <a mat-list-item routerLink="citizen-chngPwd">Change-Password</a>
-      <a mat-list-item routerLink="/home">Log-Out</a>
-      
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -44,6 +42,8 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>District Collector Office Information</span>
+      <span style="flex: 1 1 auto"></span>
+      <button mat-raised-button color="warn" routerLink="/home">Logout</button>
     </mat-toolbar>
 <router-outlet></router-outlet>
   </mat-sidenav-content>

@@ -51,6 +51,7 @@ export class CitizenApplybirthcertificateComponent implements OnInit {
   ApplyBirth(){
     let data = {
       ...this.birthform.value,
+      Rationcard:this.url,
       status : 'Pending'
     }
     if(this.birthform.valid){

@@ -14,7 +14,8 @@ export class CitizenViewcastecertificateComponent implements OnInit{
   constructor(private Api:UserApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewCast().subscribe((res:any)=>{
+    let name=JSON.parse(localStorage.getItem('user')!).UserName;
+    this.Api.ViewCast(name).subscribe((res:any)=>{
       this.Cast = res;
     })
 

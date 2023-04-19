@@ -11,7 +11,8 @@ export class CitizenViewbirthcertificateComponent implements OnInit{
   constructor(private Api:UserApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewBirth().subscribe((res:any)=>{
+    let name=JSON.parse(localStorage.getItem('user')!).UserName;
+    this.Api.ViewBirth(name).subscribe((res:any)=>{
       this.Birth = res;
       console.log(this.Birth,"check");
       

@@ -48,6 +48,7 @@ ngOnInit(): void {
   applyCaste(){
     let data ={
       ...this.casteform.value,
+      Sscmemo:this.url,
       status:'Pending'
     } ;
     console.log(data);

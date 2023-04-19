@@ -13,7 +13,8 @@ export class CitizenViewrationcertificateComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.Api.ViewRation().subscribe((res:any)=>{
+    let name=JSON.parse(localStorage.getItem('user')!).UserName;
+    this.Api.ViewRation(name).subscribe((res:any)=>{
       this.Ration = res;
     })
   }

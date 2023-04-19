@@ -8,13 +8,13 @@
                 <div class="col-sm-4">
                     <mat-form-field appearance="outline">
                         <mat-label>UserName</mat-label>
-                        <input matInput placeholder="Please Enter UserName" formControlName="UserName">
+                        <input matInput placeholder="Please Enter UserName" formControlName="UserName" readonly>
                     </mat-form-field>
                 </div>
                 <div class="col-sm-4">
                     <mat-form-field appearance="outline">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Please Enter Password" formControlName="Password">
+                        <input matInput placeholder="Please Enter Password" formControlName="Password" readonly>
                     </mat-form-field>
                 <div class="col-sm-2"></div>
                 </div>
@@ -109,7 +109,7 @@
 
 
             <div class="text-center mb-3 mt-2">
-                <button mat-raised-button color="primary" (click)="Update()">UpdateProfile</button>
+                <button mat-raised-button color="primary" (click)="update()" >UpdateProfile</button>
             </div>
         </mat-card>
     </form>

@@ -33,7 +33,7 @@ addcompliant(){
       this.router.navigate(['/citizen-navbar/citizen-viewcomplaint'])
     })
   }else{
-    alert("Something Went Wrong");
+    alert("Something Went Wrong")
   }
 }
 }

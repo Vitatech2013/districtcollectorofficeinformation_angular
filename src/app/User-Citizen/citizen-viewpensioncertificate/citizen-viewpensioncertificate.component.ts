@@ -13,7 +13,8 @@ export class CitizenViewpensioncertificateComponent implements OnInit{
   constructor(private Api:UserApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewPension().subscribe((res:any)=>{
+    let name=JSON.parse(localStorage.getItem('user')!).UserName;
+    this.Api.ViewPension(name).subscribe((res:any)=>{
       this.Pension = res;
     })
   }

@@ -56,6 +56,8 @@ export class EmployeeProfileComponent implements OnInit {
         alert("Profile updated Successfully");
         window.location.reload();
       })
+    }else{
+      alert("Something went wwrong")
     }
   }
 }

@@ -7,7 +7,6 @@
           <tr class="table-primary">
             <th scope="col">S.No</th>
             <th scope="col">UserName</th>
-            <th scope="col">EmailId</th>
             <th scope="col">Mobileno</th>
             <th scope="col">s/O(or)D/O</th>
             <th scope="col">FatherName</th>
@@ -28,7 +27,6 @@
           <tr *ngFor="let P of Pension index as i">
             <td>{{i+1}}</td>
             <td>{{P.UserName}}</td>
-            <td>{{P.Emailid}}</td>
             <td>{{P.MobileNumber}}</td>
             <td>{{P.Sonofdaughter}}</td>
            <td>{{P.SonOfDaughterName}}</td>
@@ -40,7 +38,7 @@
            <td>{{P.HouseNo}}</td>
            <td>{{P.Pincode}}</td>
            <td>{{P.AadherNumber}}</td>
-           <td>{{P.Aadharcard}}</td>
+           <td><img src="{{P.Aadharcard}}" width="60%" height="60%"></td>
            <td>{{P.status}}</td>
            <td>
             <button mat-icon-button color="primary">

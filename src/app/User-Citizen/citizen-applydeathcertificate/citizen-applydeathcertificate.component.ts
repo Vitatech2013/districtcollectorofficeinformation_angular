@@ -51,6 +51,7 @@ export class CitizenApplydeathcertificateComponent implements OnInit {
   applyDeath(){
     let data = {
       ...this.deathForm.value,
+      Jobcard:this.url,
       status : 'Pending'
     }
     if(this.deathForm.valid){
