@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>Admin-Module</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="admin-addemployee">Add Employee</a>
       <a mat-list-item routerLink="admin-viewemployee">View Employee</a>
@@ -24,7 +24,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Collector-Admin</span>
+      <span>District Collector Officer</span>
       <span style="flex : 1 1 auto"></span>
       <button mat-raised-button color="warn" routerLink="/home">Logout</button>
     </mat-toolbar>

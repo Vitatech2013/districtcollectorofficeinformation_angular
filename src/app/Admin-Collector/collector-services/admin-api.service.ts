@@ -20,4 +20,19 @@ GetEmployee(){
 DeleteEmployee(id:any){
   return this.http.delete<any>(`http://localhost:4000/admin//empdel/` +id)
 }
+ViewCast(){
+  return this.http.get('http://localhost:4000/admin/castview')
+}
+ViewDeathCerti(){
+  return this.http.get('http://localhost:4000/admin/deathview')
+}
+ViewPension(){
+  return this.http.get('http://localhost:4000/admin/pentionview')
+}
+ViewRation(){
+  return this.http.get('http://localhost:4000/admin/rationview')
+}
+ViewBirth(){
+  return this.http.get('http://localhost:4000/admin/birthview')
+}
 }

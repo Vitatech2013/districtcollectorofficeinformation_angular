@@ -31,6 +31,7 @@ ViewPension(){
 }
 ViewRation(){
   return this.http.get('http://localhost:4000/user/viewration')
+}
 UserAddComplaint(data:any){
    return this.http.post<any>(`http://localhost:4000/user/Addcomplaint`, data)
 }
