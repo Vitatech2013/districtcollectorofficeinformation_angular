@@ -17,15 +17,8 @@ export class CitizenRegistrationComponent {
     {name:'warangal',mandals:['Chennaraopet','Duggondi','Geesugonda']},
     {name:'Hanmakonda',mandals:['Shayampet','Damera','Thimmapur']},
   ];
-  // ,villages:['Odyaram','Annaram','Thotapalli','Vardavelli','Nagulamalyala','Veeranapalli']
-  // ,villages:['Duggondi','Chalparthi','Jhalli','Chennaraopet','Elkurthy','Dharmaram']
-  // ,villages:['Mustyalpalle','Kantathmakur','Mamnoor','Allipur','Rangasaipet']
 
-  ChangeDistrict(count: any) {
-    this.mandals = this.District.find(con => con.name == count).mandals;
-    console.log(this.mandals,"mandal");
-    
-  }
+
 
 
   constructor(private fb:FormBuilder , private service:UserApiService , private router:Router){}
@@ -49,6 +42,7 @@ export class CitizenRegistrationComponent {
   this.service.UserReg(this.RegForm.value).subscribe((res)=>{
     if(res){
       alert("User Registered Success");
+      this.router.navigate(['/citizen-login'])
     }
     else{
       alert("Invalid Credentials")

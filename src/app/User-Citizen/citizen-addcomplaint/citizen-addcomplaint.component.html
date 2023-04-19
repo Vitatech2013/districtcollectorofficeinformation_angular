@@ -1,15 +1,25 @@
 <div class="main">
-    <form>
+    <form [formGroup]="citizencomplaintform" (ngSubmit)="addcompliant()">
         <mat-card>
            <div class="text-center mt-4">
                 <h2>Add-Complaints</h2>
            </div>
            <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <mat-form-field appearance="outline">
+                    <mat-label>UserName</mat-label>
+                    <input matInput placeholder="Enter Subject" formControlName="UserName" readonly >
+                </mat-form-field>
+            </div>
+            <div class="col-sm-2"></div>
+       </div>
+           <div class="row">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-8">
                     <mat-form-field appearance="outline">
                         <mat-label>Subject</mat-label>
-                        <input matInput placeholder="Enter Subject">
+                        <input matInput placeholder="Enter Subject" formControlName="Subject">
                     </mat-form-field>
                 </div>
                 <div class="col-sm-2"></div>
@@ -19,13 +29,13 @@
             <div class="col-sm-8">
                 <mat-form-field appearance="outline">
                     <mat-label>Description</mat-label>
-                    <textarea matInput></textarea>
+                    <textarea matInput formControlName="Description"></textarea >
                 </mat-form-field>
             </div>
             <div class="col-sm-2"></div>
        </div>
-       <div class="text-center">
-        <button class="btn btn-success mb-4">Submit</button>
+       <div class="text-center mb-3">
+        <button mat-raised-button color="primary">Submit</button>
        </div>
         </mat-card>
     </form>

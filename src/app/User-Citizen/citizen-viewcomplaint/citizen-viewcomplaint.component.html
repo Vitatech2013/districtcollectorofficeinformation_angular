@@ -1,28 +1,22 @@
-<div class="table-responsive">
-    <table class="table table-bordered m-auto mt-4">
-        <thead>
-          <tr class="table-info">
-            <th scope="col">S.No</th>
-            <th scope="col">Subject</th>
-            <th scope="col">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-          </tr>
-        </tbody>
+<mat-card>
+  <mat-toolbar>Caste-certificate</mat-toolbar>
+  <div class="table-responsive">
+      <table class="table table-striped">
+          <thead>
+              <tr>
+              <th>S.No</th>
+              <th>Subject</th>
+              <th>Description</th>
+
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let data of Complaints index as i">
+                <td>{{i+1}}</td>
+              <td>{{data.Subject}}</td>
+              <td>{{data.Description}}</td>  
+               </tr>
+          </tbody>
       </table>
-</div>
+  </div>
+</mat-card>

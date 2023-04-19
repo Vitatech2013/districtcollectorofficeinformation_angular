@@ -17,11 +17,7 @@ export class CitizenProfileComponent {
     {name:'warangal',mandals:['Chennaraopet','Duggondi','Geesugonda']},
     {name:'Hanmakonda',mandals:['Shayampet','Damera','Thimmapur']},
   ];
-  ChangeDistrict(count: any) {
-    this.mandals = this.District.find(con => con.name == count).mandals;
-    console.log(this.mandals,"mandal");
-    
-  }
+
   constructor(private fb:FormBuilder , private service:UserApiService , private router:Router){}
 
   ngOnInit(): void {

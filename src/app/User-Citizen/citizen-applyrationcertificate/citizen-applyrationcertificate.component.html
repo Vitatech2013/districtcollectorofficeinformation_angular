@@ -1,47 +1,35 @@
 <div class="main mt-4">
     <mat-card>
-        <form>
+        <form [formGroup]="rationform" (ngSubmit)="applyRation()">
             <div class="text-center">
                 <h2>RationCard-Certificate</h2>
             </div>
             <div class="body">
                 <div class="row">
-                    <div class="col-sm-4">
-                        <mat-form-field appearance="outline">
-                            <mat-label>ApplicationNumber</mat-label>
-                            <input matInput placeholder="Please Enter Applicationno">
-                        </mat-form-field>
-                    </div>
-                    <div class="col-sm-4">
+                    
+                    <div class="col-sm-3">
                         <mat-form-field appearance="outline">
                             <mat-label>UserName</mat-label>
-                            <input matInput placeholder="Enter UserName">
+                            <input matInput placeholder="Enter UserName" formControlName="UserName" readonly>
                         </mat-form-field>
-                    </div>
-                    <div class="col-sm-4">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Email-Id</mat-label>
-                            <input matInput placeholder="Enter EmailId">
-                        </mat-form-field>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
+                    </div>       
+             
+                    <div class="col-sm-3">
                         <mat-form-field appearance="outline">
                             <mat-label>Mobile no</mat-label>
-                            <input matInput placeholder="Please Enter Mobileno">
+                            <input matInput placeholder="Please Enter Mobileno" formControlName="MobileNumber" type="number">
                         </mat-form-field>
                     </div>
-                    <div class="col-sm-4 mt-3 m-auto">
-                        <mat-radio-group aria-label="Select an option" color="primary">
+                    <div class="col-sm-3 mt-3 m-auto">
+                        <mat-radio-group aria-label="Select an option" color="primary" formControlName="Sonofdaughter">
                             <mat-radio-button value="S/O">S/O</mat-radio-button>
                             <mat-radio-button value="D/O">D/O</mat-radio-button>
                           </mat-radio-group>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-3">
                         <mat-form-field appearance="outline">
                             <mat-label>S/O (or) D/O Name</mat-label>
-                            <input matInput placeholder="Enter Name">
+                            <input matInput placeholder="Enter Name" formControlName="SonOfDaughterName">
                           </mat-form-field>
                     </div>
                 </div>
@@ -49,19 +37,19 @@
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>No of Childrens</mat-label>
-                            <input matInput placeholder="Enter Childrens">
+                            <input matInput placeholder="Enter Childrens" formControlName="NoOfChildrens" type="number">
                         </mat-form-field>
                     </div>
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>No of Funds</mat-label>
-                            <input matInput placeholder="Enter no of Adults">
+                            <input matInput placeholder="Enter no of Adults" formControlName="NoofAdultsinYourfamily" type="number">
                         </mat-form-field>
                     </div>
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Age</mat-label>
-                            <input matInput placeholder="Enter Age">
+                            <input matInput placeholder="Enter Age" formControlName="Age" type="number">
                         </mat-form-field>
                     </div>
                 </div>
@@ -69,7 +57,7 @@
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>District</mat-label>
-                            <mat-select >
+                            <mat-select formControlName="District" >
                               <mat-option value="Karimnagar">Karimnagar</mat-option>
                               <mat-option value="Hanmakonda">Hanmakonda</mat-option>
                               <mat-option value="warangal">warangal</mat-option>
@@ -80,7 +68,7 @@
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Mandal</mat-label>
-                            <mat-select >
+                            <mat-select formControlName="Mandal">
                               <mat-option value="Gangadhara">Gangadhara</mat-option>
                               <mat-option value="Vanaparthi">Vanaparthi</mat-option>
                               <mat-option value="Bejanki">Bejanki</mat-option>
@@ -91,7 +79,7 @@
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Town (or) Village</mat-label>
-                            <mat-select >
+                            <mat-select formControlName="City">
                                 <mat-option value="Odyaram">Odyaram</mat-option>
                                 <mat-option value="Gatududenapalli">Gatududenapalli</mat-option>
                                 <mat-option value="Veerapur">Veerapur</mat-option>
@@ -104,19 +92,19 @@
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>House No</mat-label>
-                            <input matInput placeholder="Enter Houseno">
+                            <input matInput placeholder="Enter Houseno" formControlName="HouseNo" >
                         </mat-form-field>                        
                     </div>
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>Pincode</mat-label>
-                            <input matInput placeholder="Enter Pincode">
+                            <input matInput placeholder="Enter Pincode" formControlName="Pincode" type="number">
                         </mat-form-field>
                     </div>
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>AnnualIncome</mat-label>
-                            <input matInput placeholder="Enter Annual Income">
+                            <input matInput placeholder="Enter Annual Income" formControlName="Annualincome" type="number">
                         </mat-form-field>
                     </div>
                 </div>
@@ -124,27 +112,18 @@
                     <div class="col-sm-4">
                         <mat-form-field appearance="outline">
                             <mat-label>AdharNumber</mat-label>
-                            <input matInput placeholder="Enter Adharno">
+                            <input matInput placeholder="Enter Adharno" formControlName="AadherNumber" type="number">
                         </mat-form-field>
                     </div>
                     <div class="col-sm-4 mt-2">
                         <mat-label><span style="color: red;">*</span>Job/AdharCard</mat-label>
-                        <input  type="file" accept="image/*" class="form-control"  (change)="onSelectFile($event)">
+                        <input  type="file" accept="image/*" class="form-control"  (change)="onSelectFile($event)" formControlName="Photo">
                     </div>
-                    <div class="col-sm-4">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Status</mat-label>
-                            <mat-select >
-                                <mat-option value="Pending">Pending</mat-option>
-                                <mat-option value="Accept">Accept</mat-option>
-                                <mat-option value="Reject">Reject</mat-option>
-                              </mat-select>
-                        </mat-form-field> 
-                    </div>
-<!---Their is no type field in back-end model check once-->
+                   
+
                 </div>
                 <div class="text-center mt-4 mb-4">
-                    <button class="btn btn-success">Submit</button>
+                    <button mat-raised-button color="primary">Apply</button>
                 </div>
 
             </div>
