@@ -11,7 +11,7 @@ export class CollectorViewrationcertificateComponent {
   constructor(private Api:AdminApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewDeathCerti().subscribe((res:any)=>{
+    this.Api.ViewRation().subscribe((res:any)=>{
       this.Ration = res;
     })
 

@@ -11,8 +11,10 @@ export class CollectorViewcastecertificateComponent implements OnInit{
   constructor(private Api:AdminApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewBirth().subscribe((res:any)=>{
+    this.Api.ViewCast().subscribe((res:any)=>{
       this.Caste = res;
+      console.log(this.Caste);
+      
     })
 
 }

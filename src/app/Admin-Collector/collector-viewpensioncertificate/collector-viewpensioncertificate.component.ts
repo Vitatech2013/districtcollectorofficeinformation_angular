@@ -11,7 +11,7 @@ export class CollectorViewpensioncertificateComponent {
   constructor(private Api:AdminApiService){}
 
   ngOnInit(): void {
-    this.Api.ViewDeathCerti().subscribe((res:any)=>{
+    this.Api.ViewPension().subscribe((res:any)=>{
       this.Pension = res;
     })
 

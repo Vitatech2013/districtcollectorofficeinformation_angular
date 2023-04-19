@@ -4,20 +4,21 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                <th>S.No</th>
-                <th>User Name</th>
-                <th>Mobile No</th>
-                <th>S/D</th>
-                <th>Fname</th>
-                <th>Caste</th>
-                <th>Dob</th>
-                <th>District</th>
-                <th>Mandal</th>
-                <th>City</th>
-                <th>HouseNo</th>
-                <th>Pincode</th>
-                <th>Sscmemo</th>
-                <th>status</th>
+                    <th scope="col">S.No</th>
+                    <th scope="col">UserName</th>
+                    <th scope="col">Mobileno</th>
+                    <th scope="col">s/O(or)D/O</th>
+                    <th scope="col">FatherName</th>
+                    <th scope="col">D.O.Death</th>
+                    <th scope="col">Place of Death</th>
+                    <th scope="col">District</th>
+                    <th scope="col">Mandal</th>
+                    <th scope="col">Village</th>
+                    <th scope="col">Houseno</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Adharno</th>
+                    <th scope="col">Documents</th>
+                    <th scope="col">Status</th>
 
                 </tr>
             </thead>
@@ -25,9 +26,9 @@
                 <tr *ngFor="let D of Death index as i">
                 <td>{{i+1}}</td>
                 <td>{{D.UserName}}</td>
-                <td>{{D.MobileNumber}</td>
+                <td>{{D.MobileNumber}}</td>
                 <td>{{D.Sonofdaughter}}</td>
-                <td>{{D.SonofDaughterName}}</td>
+                <td>{{D.SonOfDaughterName}}</td>
                 <td>{{D.Dob | date:'dd/MM/yyyy'}}</td>
                 <td>{{D.PlaceDob}}</td>
                 <td>{{D.District}}</td>
@@ -36,7 +37,6 @@
                 <td>{{D.HouseNo}}</td>
                 <td>{{D.Pincode}}</td>
                 <td>{{D.AadherNumber}}</td>
-                <td>{{D.Jobcard}}</td>
                 <td>
                     <img src="{{D.Jobcard}}" alt="img" width="60%" height="60%">
                 </td>
