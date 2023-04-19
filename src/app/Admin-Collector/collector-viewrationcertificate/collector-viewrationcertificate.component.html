@@ -14,29 +14,32 @@
                 <th>District</th>
                 <th>Mandal</th>
                 <th>City</th>
-                <th>HouseNo</th>
-                <th>Pincode</th>
-                <th>Sscmemo</th>
+                <th>AnnualIncome</th>
+                <th>Aadharno</th>
+                <th>Aadharcard</th>
                 <th>status</th>
 
                 </tr>
             </thead>
             <tbody >
-                <tr >
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <tr *ngFor="let R of Ration index as i">
+                <td>{{i+1}}</td>
+                <td>{{R.UserName}}</td>
+                <td>{{R.MobileNumber}}</td>
+                <td>{{R.Sonofdaughter}}</td>
+                <td>{{R.SonofDaughterName}}</td>
+                <td>{{R.NoOfChildrens}}</td>
+                <td>{{R.NoofAdultsinYourfamily}}</td>
+                <td>{{R.Age}}</td>
+                <td>{{R.District}}</td>
+                <td>{{R.Mandal}}</td>
+                <td>{{R.City}}</td>
+                <td>{{R.Annualincome}}</td>
+                <td>{{R.AadherNumber}}</td>
+                <td>
+                    <img src="{{R.Photo}}" alt="img" width="60%" height="60%">
+                </td>
+                <td>{{R.status}}</td>
             </tr>
             </tbody>
         </table>

@@ -22,21 +22,25 @@
                 </tr>
             </thead>
             <tbody >
-                <tr >
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <tr *ngFor="let D of Death index as i">
+                <td>{{i+1}}</td>
+                <td>{{D.UserName}}</td>
+                <td>{{D.MobileNumber}</td>
+                <td>{{D.Sonofdaughter}}</td>
+                <td>{{D.SonofDaughterName}}</td>
+                <td>{{D.Dob | date:'dd/MM/yyyy'}}</td>
+                <td>{{D.PlaceDob}}</td>
+                <td>{{D.District}}</td>
+                <td>{{D.Mandal}}</td>
+                <td>{{D.City}}</td>
+                <td>{{D.HouseNo}}</td>
+                <td>{{D.Pincode}}</td>
+                <td>{{D.AadherNumber}}</td>
+                <td>{{D.Jobcard}}</td>
+                <td>
+                    <img src="{{D.Jobcard}}" alt="img" width="60%" height="60%">
+                </td>
+                <td>{{D.status}}</td>
             </tr>
             </tbody>
         </table>
