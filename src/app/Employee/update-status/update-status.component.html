@@ -1,0 +1,27 @@
+<div class="main">
+    <div class="head">
+        <h2>Update-Status<span class="material-symbols-outlined icon">close</span></h2>
+    </div>
+    <hr>
+    <div class="body mt-4">
+        <div class="user">
+            <mat-form-field appearance="outline">
+                <mat-label>UserName</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="staus">
+            <mat-form-field appearance="outline">
+                <mat-label>Status</mat-label>
+                <mat-select >
+                  <mat-option value="Pending">Pending</mat-option>
+                  <mat-option value="Accept">Accept</mat-option>
+                  <mat-option value="Reject">Reject</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div class="text-center mt-2">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+    </div>
+</div>

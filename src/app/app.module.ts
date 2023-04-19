@@ -51,6 +51,7 @@ import { ReactiveFormsModule ,FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeProfileComponent } from './Employee/employee-profile/employee-profile.component';
 import { CitizenChngPwdComponent } from './User-Citizen/citizen-chng-pwd/citizen-chng-pwd.component';
+import { UpdateStatusComponent } from './Employee/update-status/update-status.component';
 
 
 @NgModule({
@@ -93,7 +94,8 @@ import { CitizenChngPwdComponent } from './User-Citizen/citizen-chng-pwd/citizen
     CitizenViewdeathcertificateComponent,
     CitizenViewrationcertificateComponent,
     EmployeeProfileComponent,
-    CitizenChngPwdComponent
+    CitizenChngPwdComponent,
+    UpdateStatusComponent
   ],
   imports: [
     BrowserModule,
