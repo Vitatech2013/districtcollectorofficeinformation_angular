@@ -1,1 +1,54 @@
-<p>employee-viewpensioncertificate works!</p>
+<div class="text-center mt-4">
+    <h2 style="color:rgb(238, 169, 21)">Pension Certificate List</h2>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">S.No</th>
+            <th scope="col">UserName</th>
+            <th scope="col">EmailId</th>
+            <th scope="col">Mobileno</th>
+            <th scope="col">s/O(or)D/O</th>
+            <th scope="col">FatherName</th>
+            <th scope="col">Age</th>
+            <th scope="col">Children</th>
+            <th scope="col">District</th>
+            <th scope="col">Mandal</th>
+            <th scope="col">Village</th>
+            <th scope="col">Houseno</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Adharno</th>
+            <th scope="col">Documents</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let P of Pension index as i">
+            <td>{{i+1}}</td>
+            <td>{{P.UserName}}</td>
+            <td>{{P.Emailid}}</td>
+            <td>{{P.MobileNumber}}</td>
+            <td>{{P.Sonofdaughter}}</td>
+           <td>{{P.SonOfDaughterName}}</td>
+           <td>{{P.Age}}</td>
+           <td>{{P.Children}}</td>
+           <td>{{P.District}}</td>
+           <td>{{P.Mandal}}</td>
+           <td>{{P.City}}</td>
+           <td>{{P.HouseNo}}</td>
+           <td>{{P.Pincode}}</td>
+           <td>{{P.AadherNumber}}</td>
+           <td>{{P.Aadharcard}}</td>
+           <td>{{P.status}}</td>
+           <td>
+            <button mat-icon-button color="primary">
+                <mat-icon>edit</mat-icon>
+              </button>
+        </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+

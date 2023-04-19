@@ -1,1 +1,52 @@
-<p>employee-viewbirthcertificate works!</p>
+<div class="text-center mt-4">
+    <h2 style="color:rgb(238, 169, 21)">Birth Certificates List</h2>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">S.No</th>
+            <th scope="col">UserName</th>
+            <th scope="col">EmailId</th>
+            <th scope="col">Mobileno</th>
+            <th scope="col">s/O(or)D/O</th>
+            <th scope="col">FatherName</th>
+            <th scope="col">D.O.B</th>
+            <th scope="col">Place</th>
+            <th scope="col">District</th>
+            <th scope="col">Mandal</th>
+            <th scope="col">Village</th>
+            <th scope="col">Houseno</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Adharno</th>
+            <th scope="col">Documents</th>
+            <th scope="col">Status</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let B of Birth index as i">
+            <td>{{i+1}}</td>
+            <td>{{B.UserName}}</td>
+            <td>{{B.Emailid}}</td>
+            <td>{{B.MobileNumber}}</td>
+            <td>{{B.Sonofdaughter}}</td>
+            <td>{{B.SonOfDaughterName}}</td>
+            <td>{{B.Dob}}</td>
+            <td>{{B.PlaceDob}}</td>
+            <td>{{B.District}}</td>
+            <td>{{B.Mandal}}</td>
+            <td>{{B.City}}</td>
+            <td>{{B.HouseNo}}</td>
+            <td>{{B.Pincode}}</td>
+            <td>{{B.AadherNumber}}</td>
+            <td>{{B.Rationcard}}</td>
+            <td>{{B.status}}</td>
+            <button mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
