@@ -42,9 +42,7 @@
             <td>{{B.AadherNumber}}</td>
             <td>{{B.Rationcard}}</td>
             <td>{{B.status}}</td>
-            <button mat-icon-button color="primary">
-              <mat-icon>edit</mat-icon>
-            </button>
+            <a (click)="status()"><mat-icon color="primary">edit</mat-icon></a>
           </tr>
         </tbody>
       </table>

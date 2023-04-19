@@ -23,21 +23,22 @@
                 </tr>
             </thead>
             <tbody >
-                <tr >
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <tr *ngFor="let B of Birth index as i">
+                <td>{{i+1}}</td>
+                <td>{{B.UserName}}</td>
+                <td>{{B.MobileNumber}}</td>
+                <td>{{B.Sonofdaughter}}</td>
+                <td>{{B.SonofDaughterName}}</td>
+                <td>{{B.Dob}}</td>
+                <td>{{B.PlaceDob}}</td>
+                <td>{{B.District}}</td>
+                <td>{{B.Mandal}}</td>
+                <td>{{B.City}}</td>
+                <td>{{B.HouseNo}}</td>
+                <td>{{B.Pincode}}</td>
+                <td>{{B.AadherNumber}}</td>
+                <td>{{B.Rationcard}}</td>
+                <td>{{B.status}}</td>
             </tr>
             </tbody>
         </table>
