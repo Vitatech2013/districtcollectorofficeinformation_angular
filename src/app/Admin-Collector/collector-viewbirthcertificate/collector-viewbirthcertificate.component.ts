@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AdminApiService } from '../collector-services/admin-api.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { AdminApiService } from '../collector-services/admin-api.service';
   templateUrl: './collector-viewbirthcertificate.component.html',
   styleUrls: ['./collector-viewbirthcertificate.component.scss']
 })
-export class CollectorViewbirthcertificateComponent {
+export class CollectorViewbirthcertificateComponent implements OnInit{
   Birth:any;
   constructor(private Api:AdminApiService){}
 

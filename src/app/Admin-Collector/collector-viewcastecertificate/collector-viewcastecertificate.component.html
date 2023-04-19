@@ -22,21 +22,24 @@
                 </tr>
             </thead>
             <tbody >
-                <tr >
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <tr *ngFor="let C of Caste index as i">
+                <td>{{i+1}}</td>
+                <td>{{C.UserName}}</td>
+                <td>{{C.MobileNumber}}</td>
+                <td>{{C.Sonofdaughter}}</td>
+                <td>{{C.SonofDaughterName}}</td>
+                <td>{{C.CastType}}</td>
+                <td>{{C.Dob | date:'dd/MM/yyyy'}}</td>
+                <td>{{C.District}}</td>
+                <td>{{C.Mandal}}</td>
+                <td>{{C.City}}</td>
+                <td>{{C.HouseNo}}</td>
+                <td>{{C.Pincode}}</td>
+                <td>{{C.AadherNumber}}</td>
+                <td>
+                    <img src="{{C.Sscmemo}}" alt="img" width="60%" height="60%">
+                </td>
+                <td>{{C.status}}</td>
             </tr>
             </tbody>
         </table>
