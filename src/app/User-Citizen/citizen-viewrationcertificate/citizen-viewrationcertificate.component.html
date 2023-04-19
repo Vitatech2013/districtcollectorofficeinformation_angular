@@ -1,5 +1,5 @@
 <div class="text-center mt-4">
-    <h2 style="color:rgb(238, 169, 21)">Birth Certificates List</h2>
+    <h2 style="color:rgb(238, 169, 21)">Ration Certificates List</h2>
 </div>
 <div class="table-responsive">
     <table class="table table-hover">
@@ -18,30 +18,28 @@
             <th scope="col">Mandal</th>
             <th scope="col">Village</th>
             <th scope="col">Income</th>
-            <th scope="col">Card</th>
             <th scope="col">Adharno</th>
             <th scope="col">Documents</th>
             <th scope="col">Status</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let R of Ration index as i">
+            <td>{{i+1}}</td>
+            <td>{{R.UserName}}</td>
+            <td>{{R.ApplicationNo}}</td>
+            <td>{{R.MobileNumber}}</td>
+            <td>{{R.Sonofdaughter}}</td>
+            <td>{{R.SonOfDaughterName}}</td>
+            <td>{{R.NoOfChildrens}}</td>
+            <td>{{R.NoofAdultsinYourfamily}}</td>
+            <td>{{R.Age}}</td>
+            <td>{{R.District}}</td>
+            <td>{{R.Mandal}}</td>
+            <td>{{R.City}}</td>
+            <td>{{R.Annualincome}}</td>
+            <td>{{R.AadherNumber}}</td>
+            <td>{{R.status}}</td>
           </tr>
         </tbody>
       </table>

@@ -1,0 +1,32 @@
+<div class="main mt-4">
+    <form [formGroup]="ChangePwd" (ngSubmit)="Change()">
+        <mat-card>
+            <div class="text-center mt-4">
+                <h2>Change Your Password</h2>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>UserName</mat-label>
+                        <input matInput placeholder="Please Enter UserName" formControlName="UserName">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Enter Oldpassword" formControlName="Password">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>New Password</mat-label>
+                        <input matInput placeholder="Enter NewPassword" formControlName="newPassword">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <button class="btn btn-success" type="submit" [disabled]="this.ChangePwd.invalid">Change Password</button>
+            </div>
+        </mat-card>
+    </form>
+</div>

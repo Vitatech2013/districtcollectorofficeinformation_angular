@@ -18,4 +18,26 @@ EditEmployeeProfiie(id:any , data:any){
 
   return this.http.put<any>(`http://localhost:4000/employee/empupdateprofile/` +id , data)
 }
+ViewComplaints(){
+  return this.http.get('http://localhost:4000/employee/viwcomplaints')
+}
+ViewCast(){
+  return this.http.get('http://localhost:4000/employee/empcastvieww')
+}
+ViewDeathCerti(){
+  return this.http.get('http://localhost:4000/employee/empdeathvieww')
+}
+ViewPension(){
+  return this.http.get('http://localhost:4000/employee/emppentionvieww')
+}
+ViewRation(){
+  return this.http.get('http://localhost:4000/employee/emprationvieww')
+}
+ViewBirth(){
+  return this.http.get('http://localhost:4000/employee/empbirthvieww')
+}
+CastUpdate(){
+  
+}
+
 }

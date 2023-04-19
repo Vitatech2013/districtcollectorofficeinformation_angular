@@ -1,1 +1,55 @@
-<p>employee-viewdeathcertificate works!</p>
+<div class="text-center mt-4">
+    <h2 style="color:rgb(238, 169, 21)">Death Certificates List</h2>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr class="table-primary">
+            <th scope="col">S.No</th>
+            <th scope="col">UserName</th>
+            <th scope="col">EmailId</th>
+            <th scope="col">Mobileno</th>
+            <th scope="col">s/O(or)D/O</th>
+            <th scope="col">FatherName</th>
+            <th scope="col">D.O.Death</th>
+            <th scope="col">Place of Death</th>
+            <th scope="col">District</th>
+            <th scope="col">Mandal</th>
+            <th scope="col">Village</th>
+            <th scope="col">Houseno</th>
+            <th scope="col">Pincode</th>
+            <th scope="col">Adharno</th>
+            <th scope="col">Documents</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let D of DeathCerti index as i">
+            <td>{{i+1}}</td>
+            <td>{{D.UserName}}</td>
+            <td>{{D.Emailid}}</td>
+            <td>{{D.MobileNumber}}</td>
+            <td>{{D.Sonofdaughter}}</td>
+            <td>{{D.SonOfDaughterName}}</td>
+            <td>{{D.Dob}}</td>
+            <td>{{D.PlaceDob}}</td>
+            <td>{{D.District}}</td>
+            <td>{{D.Mandal}}</td>
+            <td>{{D.City}}</td>
+            <td>{{D.HouseNo}}</td>
+            <td>{{D.Pincode}}</td>
+            <td>{{D.AadherNumber}}</td>
+            <td>{{D.Jobcard}}</td>
+            <td>{{D.status}}</td>
+            <td>
+                <button mat-icon-button color="primary">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
